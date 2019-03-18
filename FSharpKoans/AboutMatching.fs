@@ -14,7 +14,10 @@ module ``04: Match expressions`` =
     [<Test>]
     let ``01 Basic match expression`` () =
         match 8000 with
-        | v-> "Insufficient power-level" 
+        | 8000 -> "Insufficient power-level" 
+        | _ -> failwith "Whatever"
+        ()
+     
  
     [<Test>]
     let ``02 Match expressions are expressions, not statements`` () =
