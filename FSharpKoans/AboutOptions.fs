@@ -1,5 +1,6 @@
 ﻿namespace FSharpKoans
 open NUnit.Framework
+open FsUnitTyped
 
 (*
 In F#, we tend to use options instead of exceptions for error-handling.
