@@ -6,38 +6,38 @@ module ``13: String manipulation`` =
     let ``01 Finding the length of a string`` () =
         let a = "calamari"
         let b = "It's-a me, Maaario!"
-        String.FILL_ME_IN a |> should equal 8
-        String.FILL_ME_IN b |> should equal 19
+        String.length a |> should equal 8
+        String.length b |> should equal 19
 
     [<Test>]
     let ``02 Getting a substring (Part 1).`` () =
         let a = "bright"
-        a.[1..] |> should equal __
+        a.[1..] |> should equal "right"
 
     [<Test>]
     let ``03 Getting a substring (Part 2).`` () =
         let a = "bright"
-        a.[..3] |> should equal __
+        a.[..3] |> should equal "brig"
 
     [<Test>]
     let ``04 Getting a substring (Part 3).`` () =
         let a = "bright"
-        a.[1..3] |> should equal __
+        a.[1..3] |> should equal "rig"
 
     [<Test>]
     let ``05 Concatenating strings`` () =
         let a = ["hip"; "hip"; "hurray"]
-        String.FILL__ME_IN " " a |> should equal "hip hip hurray"
-        String.FILL__ME_IN __ __ |> should equal "hiphiphurray"
-        String.FILL__ME_IN __ __ |> should equal "hip! hip! hurray"
+        String.concat " " a |> should equal "hip hip hurray"
+        String.concat "" a |> should equal "hiphiphurray"
+        String.concat "! " a |> should equal "hip! hip! hurray"
 
     [<Test>]
     let ``06 Getting a string from an integer or float`` () =
         let a = 23
         let b = 17.8
-        __ a |> should equal "23"
+        __ a|> should equal "23"
         __ b |> should equal "17.8"
-
+   
     (*
         The next few tests involve the `sprintf` function, which
         creates a string.  The `printf` function does exactly the same
