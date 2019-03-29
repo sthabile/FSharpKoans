@@ -51,7 +51,15 @@ module ``14: List operations are so easy, you could make them yourself!`` =
     [<Test>]
     let ``03 Reversing a list, the hard way`` () =
         let rev (xs : 'a list) : 'a list =
-            List.rev xs // write a function to reverse a list here.
+           List.rev xs // write a function to reverse a list here.
+           //let rec rev list =
+           (*Csharp version of the recursive rev
+           int [] Rev (int[] list){
+            for(int i=0;i<list.count;i++){
+             
+           *)
+           
+
         rev [9;8;7] |> should equal [7;8;9]
         rev [] |> should equal []
         rev [0] |> should equal [0]
